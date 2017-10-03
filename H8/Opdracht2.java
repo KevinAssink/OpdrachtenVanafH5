@@ -8,11 +8,12 @@ public class Opdracht2 extends Applet {
     int man;
     int vrouw;
     int Potententialboy;
-    //int Potententialgirl;
+    int Potententialgirl;
+    int Totaal;
     Button Man;
     Button Vrouw;
     Button PotententialBoy;
-    //Button PotententialGirl;
+    Button PotententialGirl;
 
 
 
@@ -32,6 +33,11 @@ public class Opdracht2 extends Applet {
         PotententialBoyListener Bl = new PotententialBoyListener();
         PotententialBoy.addActionListener( Bl );
         add (PotententialBoy);
+        Potententialgirl = 0;
+        PotententialGirl = new Button("Potentiele Meisjes");
+        PotententialGirlListener Gl = new PotententialGirlListener();
+        PotententialGirl.addActionListener( Gl );
+        add (PotententialGirl);
 
 
     }
@@ -40,6 +46,9 @@ public class Opdracht2 extends Applet {
         g.drawString("aantal mannen:" + man, 50, 60);
         g.drawString("aantal vrouw:" + vrouw, 50, 70);
         g.drawString("potentiele jongens:" + Potententialboy, 50, 80);
+        g.drawString("potentiele meisjes:" + Potententialgirl, 50, 90);
+        Totaal = man + vrouw + Potententialgirl + Potententialboy;
+        g.drawString("Totaal :" + Totaal, 50, 102);
     }
 
 
@@ -62,7 +71,12 @@ public class Opdracht2 extends Applet {
             repaint();
         }
     }
-
+    class PotententialGirlListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            Potententialgirl++;
+            repaint();
+        }
+    }
 
 
 
