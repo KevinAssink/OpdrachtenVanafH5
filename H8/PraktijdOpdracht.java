@@ -55,6 +55,8 @@ public class PraktijdOpdracht extends Applet {
             repaint();
         }
     }
+
+
     class MinusListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             double number1 = Double.parseDouble(tekstvakje1.getText());
@@ -64,6 +66,8 @@ public class PraktijdOpdracht extends Applet {
             repaint();
         }
     }
+
+
     class DelenListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             double number1 = Double.parseDouble(tekstvakje1.getText());
@@ -73,6 +77,8 @@ public class PraktijdOpdracht extends Applet {
             repaint();
         }
     }
+
+
     class MaalListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             double number1 = Double.parseDouble(tekstvakje1.getText());
@@ -82,8 +88,6 @@ public class PraktijdOpdracht extends Applet {
             repaint();
         }
     }
-
-
 
 
     public static double round(double value, int places) {

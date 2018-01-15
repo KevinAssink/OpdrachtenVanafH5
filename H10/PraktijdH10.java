@@ -27,7 +27,6 @@ public class PraktijdH10 extends Applet {
     }
 
     class KnopjeListener implements ActionListener{
-        @Override
         public void actionPerformed(ActionEvent e) {
             String a = VakieI.getText();
             int input = Integer.parseInt(a);
